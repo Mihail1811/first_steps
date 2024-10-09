@@ -134,17 +134,13 @@ class IndividualSportsmen(Sportsmen):
       print(f"Соревнования по {self.type_sport}.")
 
 print(Sportsmen.get_type_sport("Футбол"), '\n')
-
 sportsmen_data1: dict = {"name": "Евгений Рылов", "age": 28, "type_sport": "Плавание", "record": 23.7}
 sportsmen_data2: dict = {"name": "Денис Еремеев", "age": 19, "type_sport": "Футбол", "team": "Волга"}
 new_sportsmen1 = Sportsmen.create_sportsmen(sportsmen_data1)
 new_sportsmen2 = Sportsmen.create_sportsmen(sportsmen_data2)
 print((new_sportsmen1.name, new_sportsmen1.age), (new_sportsmen2.name, new_sportsmen2.age), '\n')
-
 print(new_sportsmen1.get_record(), '\n')
-
 print(new_sportsmen2.get_team(), '\n')
-
 IndividualSportsmen.sportsmen_train(new_sportsmen1)
 IndividualSportsmen.sportsmen_compete(new_sportsmen1)
 print()
