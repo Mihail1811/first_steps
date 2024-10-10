@@ -103,6 +103,7 @@ class TeamSportsmen(Sportsmen):
         else:
             print(f"Команда соперника против {self.__team}.")
 
+    team = property(get_team, set_team)
 
 class IndividualSportsmen(Sportsmen):
     best_record: int = 25
@@ -136,7 +137,6 @@ class IndividualSportsmen(Sportsmen):
         else:
             print(f"Соревнования по {self.type_sport}.")
 
-
 print(Sportsmen.get_type_sport("Футбол"), '\n')
 
 sportsmen_data1: dict = {"name": "Евгений Рылов", "age": 28, "type_sport": "Плавание", "record": 23.7}
@@ -147,7 +147,8 @@ print((new_sportsmen1.name, new_sportsmen1.age), (new_sportsmen2.name, new_sport
 
 print(new_sportsmen1.get_record(), '\n')
 
-print(new_sportsmen2.get_team(), '\n')
+new_sportsmen2.team = "Спартак"
+print(new_sportsmen2.team, '\n')
 
 IndividualSportsmen.sportsmen_train(new_sportsmen1)
 IndividualSportsmen.sportsmen_compete(new_sportsmen1)
