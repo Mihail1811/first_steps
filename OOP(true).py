@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Union
 
+
 class Sportsmen(ABC):
     competition_level: list[str] = ["Областной", "Международный", "Чемпионат мира"]
     people_world: tuple[str] = ("Русские", "Татары", "Белорусы")
