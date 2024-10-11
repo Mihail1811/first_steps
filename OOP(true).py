@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Union
 
-
 class Sportsmen(ABC):
     competition_level: list[str] = ["Областной", "Международный", "Чемпионат мира"]
     people_world: tuple[str] = ("Русские", "Татары", "Белорусы")
@@ -82,7 +81,6 @@ class Sportsmen(ABC):
         if data["type_sport"] in ["Футбол", "Баскетбол", "Волейбол"]:
             return TeamSportsmen(data["name"], data["age"], data["type_sport"], data["team"])
         return IndividualSportsmen(data["name"], data["age"], data["type_sport"], data["record"])
-
 
 class TeamSportsmen(Sportsmen):
     stadiums: dict[str] = ["Волга", "Волга-Спорт-Арена", "Труд"]
