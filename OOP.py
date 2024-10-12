@@ -161,7 +161,6 @@ print(
     (new_sportsmen2.name, new_sportsmen2.age),
     '\n'
 )
-# PEP8
 print(new_sportsmen1.get_record(), '\n')
 new_sportsmen2.team = "Спартак"
 print(new_sportsmen2.team, '\n')
